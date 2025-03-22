@@ -1,0 +1,97 @@
+body { 
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f4; 
+}
+.container { 
+    max-width: 400px; 
+    margin: auto; 
+    padding: 20px; 
+    background: white; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px gray; 
+}
+#wheelCanvas { 
+    margin-top: 20px; 
+    border: 4px solid #333; 
+    border-radius: 50%; 
+    background: #fff; 
+}
+button { 
+    padding: 10px 20px; 
+    font-size: 18px; 
+    cursor: pointer; 
+    background: green; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    margin-top: 15px; 
+}
+#rewardMessage, #withdrawSection, #loadingSection, #submitForm, #confirmationMessage, #shareSection { 
+    display: none; 
+    margin-top: 20px; 
+}
+input { 
+    padding: 10px; 
+    margin: 5px; 
+    width: 90%; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+.error { 
+    color: red; 
+    font-size: 14px; 
+    display: none; 
+}
+.share-buttons { 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 20px; 
+}
+.share-buttons button { 
+    background: #007bff; 
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+}
+.share-link { 
+    margin-top: 10px; 
+    font-size: 14px; 
+    color: #333; 
+}
+.share-link textarea { 
+    width: 100%; 
+    height: 60px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    resize: none; 
+}
+.copy-button { 
+    margin-top: 10px; 
+    background: #28a745; 
+}
+.copy-button.copied { 
+    background: #6c757d; 
+}
+.share-instruction { 
+    font-size: 14px; 
+    color: #555; 
+    margin-top: 10px; 
+}
+.social-icons { 
+    width: 20px; 
+    height: 20px; 
+}
+.popup-button { 
+    background: #ff5722; 
+    margin-top: 20px; 
+}
+.ads-section { 
+    margin-top: 20px; 
+    padding: 10px; 
+    background: #f9f9f9; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}

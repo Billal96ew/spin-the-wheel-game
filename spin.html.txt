@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎰 স্পিন করুন ও পুরস্কার জিতুন!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎯 স্পিন করুন ও পুরস্কার জিতুন! 🎁</h1>
+        <canvas id="wheelCanvas" width="300" height="300"></canvas>
+        <br>
+        <button onclick="spinWheel()">🎰 স্পিন করুন</button>
+
+        <!-- এডস সেকশন -->
+        <div class="ads-section">
+            <p>এখানে Adsterra এডস দেখানো হবে।</p>
+        </div>
+
+        <div id="rewardMessage"></div>
+        <div id="withdrawSection">
+            <h2>💰 উত্তোলন করুন</h2>
+            <button onclick="showShareSection()">📤 উত্তোলনের জন্য শেয়ার করুন</button>
+        </div>
+
+        <div id="shareSection">
+            <h2>শেয়ার করুন</h2>
+            <p class="share-instruction">উত্তোলন করতে নিচের লিঙ্কটি কপি করে আপনার পছন্দের সোশ্যাল মিডিয়ায় ৫ জনকে শেয়ার করুন:</p>
+            <div class="share-link">
+                <textarea id="shareLinkText" readonly></textarea>
+                <button class="copy-button" onclick="copyShareLink()">📋 লিঙ্ক কপি করুন</button>
+            </div>
+            <div class="share-buttons">
+                <button onclick="shareOnMessenger()">
+                    <img src="https://img.icons8.com/color/48/000000/facebook-messenger.png" class="social-icons" alt="Messenger">
+                    ম্যাসেন্জার
+                </button>
+                <button onclick="shareOnWhatsApp()">
+                    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" class="social-icons" alt="WhatsApp">
+                    হোয়াটসঅ্যাপ
+                </button>
+            </div>
+            <button onclick="showSubmitForm()">শেয়ার সম্পন্ন হয়েছে</button>
+        </div>
+
+        <div id="submitForm">
+            <h2>তথ্য সাবমিট করুন</h2>
+            <form id="withdrawForm">
+                <input type="text" id="name" placeholder="আপনার নাম" required>
+                <div class="error" id="nameError">নাম অবশ্যই পূরণ করতে হবে।</div>
+                <input type="tel" id="phone" placeholder="ফোন নম্বর" required>
+                <div class="error" id="phoneError">সঠিক ফোন নম্বর দিন (১১ ডিজিট)।</div>
+                <input type="email" id="email" placeholder="ইমেইল ঠিকানা" required>
+                <div class="error" id="emailError">সঠিক ইমেইল দিন।</div>
+                <input type="text" id="amount" placeholder="উত্তোলনের পরিমাণ" readonly>
+                <button type="submit">সাবমিট করুন</button>
+            </form>
+        </div>
+
+        <div id="loadingSection">
+            <h2>⏳ উত্তোলনের অনুরোধ গ্রহণ হয়েছে...</h2>
+            <p>✅ আমরা ৭২ ঘণ্টার মধ্যে টাকা পাঠিয়ে দেব। ধন্যবাদ!</p>
+        </div>
+
+        <div id="confirmationMessage">
+            <h2>📩 কনফার্মেশন মেসেজ</h2>
+            <p id="confirmationText"></p>
+            <button class="popup-button" onclick="confirmAction()">কনফার্ম করুন</button>
+            <button onclick="resetGame()">আবার খেলুন</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
